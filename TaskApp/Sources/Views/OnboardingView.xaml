@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskApp.Sources.Views.OnboardingView"
+             Title="OnboardingView"
+             Background="#BEC0C7">
+    <Border 
+        Background="#FFFFFF" 
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 40,40,0,0"
+        VerticalOptions="End" 
+        HeightRequest="300">
+        <VerticalStackLayout Margin="50, 50, 50, 0">
+            <Label 
+                Text="{Binding Onboarding.Title}"
+                Margin="0, 0, 0, 30"
+                TextColor="#000000"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label 
+                Text="{Binding Onboarding.Description}"
+                Margin="0, 0, 0, 30"
+                HorizontalTextAlignment="Center"
+                TextColor="#000000"
+                FontSize="18"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Button 
+                Text="Start"
+                CornerRadius="22"
+                Command="{Binding NextCommand}" 
+                HeightRequest="50"
+                WidthRequest="150"
+                Background="#FF8142"
+                TextColor="#FFFFFF"
+                FontAttributes="Bold" />
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>
